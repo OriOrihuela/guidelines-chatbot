@@ -35,7 +35,7 @@ entry point (`main.py`) you can extend for your own workflows or demos.
 1. **Clone & install**
 
    ```bash
-   git clone https://github.com/your-repo/guidelines-chatbot.git
+   git clone https://github.com/OriOrihuela/guidelines-chatbot.git
    cd guidelines-chatbot
    uv sync
    ```
@@ -58,6 +58,16 @@ entry point (`main.py`) you can extend for your own workflows or demos.
    ```
 
    The client loads environment variables via `python-dotenv`.
+
+4. **Configure `google-adk` defaults**
+
+   The ADK looks for its runtime config in `~/.config/google-adk/config.toml`
+   (or in the path pointed to by `GOOGLE_ADK_CONFIG`). Make sure that file
+   exists and defines the Gemini model and credential settings you want to
+   reuse—for example, pointing at `gemini-2.5-flash` so it matches
+   `storyblok_agent.agent.root_agent`. See the
+   [google-adk docs](https://google.github.io/adk-docs/) for the complete list
+   of supported keys.
 
 ---
 
